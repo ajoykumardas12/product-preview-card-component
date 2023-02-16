@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =======variables======= */
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* =======body======= */
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    background: var(--Cream);
+}
+
+/* =======main======= */
+main{
+    max-width: 33rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background: var(--White);
+    border-radius: 0.7rem;
+}
+
+/* =======preview image======= */
+.preview-image-container{
+    max-width: 50%;
+    min-width: 50%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.preview-image{
+    display: block;
+    max-width: 100%;
+    border-radius: 0.625rem 0 0 0.625rem;
+}
+
+/* =======preview details======= */
+.preview-details{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0.2rem 1.4rem;
+}
+.preview-subheading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    color: var(--Dark-grayish-blue);
+}
+.preview-heading{
+    padding: 0.7rem 0;
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.7rem;
+    color: var(--Very-dark-blue);
+}
+.preview-text{
+    padding: 0.2rem 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--Dark-grayish-blue);
+}
+/* =======price======= */
+.preview-price{
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+.discounted-price{
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    color: var(--Dark-cyan);
+}
+.list-price{
+    margin-left: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+}
+/* =======button======= */
+.add-cart-button{
+    width: 100%;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+    color: var(--White);
+    background: var(--Dark-cyan);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+/* =======media queries======= */
+@media only screen and (max-width: 545px){
+    main{
+        flex-direction: column;
+        max-width: 20rem;
+    }
+    .preview-image-container{
+        max-width: 100%;
+    }
+    .preview-image{
+        border-radius: 0.625rem 0.625rem 0 0;
+    }
+    .preview-details{
+        max-width: 100%;
+        margin: 1.4rem;
+    }
+}
+
