@@ -9,6 +9,7 @@
 /* =======variables======= */
 :root{
     --Dark-cyan: hsl(158, 36%, 37%);
+    --Darker-cyan: hsl(158, 74%, 12%);
     --Cream: hsl(30, 38%, 92%);
     --Very-dark-blue: hsl(212, 21%, 14%);
     --Dark-grayish-blue: hsl(228, 12%, 48%);
@@ -114,6 +115,9 @@ main{
     border: none;
     border-radius: 0.5rem;
 }
+.add-cart-button:hover{
+    background: var(--Darker-cyan);
+}
 
 /* =======media queries======= */
 @media only screen and (max-width: 545px){
@@ -132,4 +136,3 @@ main{
         margin: 1.4rem;
     }
 }
-
